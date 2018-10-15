@@ -18,7 +18,7 @@ class app_stikers extends module {
 */
 function __construct() {
   $this->name="app_stikers";
-  $this->title="Stikeri";
+  $this->title="Стикеры";
   $this->module_category="<#LANG_SECTION_APPLICATIONS#>";
   $this->checkInstalled();
 }
