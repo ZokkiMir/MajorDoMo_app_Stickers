@@ -34,40 +34,42 @@
  </td>
  <td
    >
-  [#if NOTES!=""#]
-   [#NOTES#]
+  [#if TEXT!=""#]
+   [#TEXT#]
+  [#else#]
+   &nbsp;
+  [#endif#]
+ </td>
+ <td
+  >
+  <b>
+  [#if NAME!=""#]
+   [#NAME#]
+  [#else#]
+   &nbsp;
+  [#endif#]
+  </a></b>
+ </td>
+ <td
+   >
+  [#if COLOR!=""#]
+   [#COLOR#]
   [#else#]
    &nbsp;
   [#endif#]
  </td>
  <td
    >
-  [#if LEFT!=""#]
-   [#LEFT#]
+  [#if XYZ!=""#]
+   [#XYZ#]
   [#else#]
    &nbsp;
   [#endif#]
  </td>
  <td
    >
-  [#if TOP!=""#]
-   [#TOP#]
-  [#else#]
-   &nbsp;
-  [#endif#]
- </td>
- <td
-   >
-  [#if ZINDEX!=""#]
-   [#ZINDEX#]
-  [#else#]
-   &nbsp;
-  [#endif#]
- </td>
- <td
-   >
-  [#if UPDATED!=""#]
-   [#UPDATED#]
+  [#if DT!=""#]
+   [#DT#]
   [#else#]
    &nbsp;
   [#endif#]
