@@ -15,19 +15,16 @@
     $out['ERR_TITLE']=1;
     $ok=0;
    }
-  //updating 'notes' (varchar)
-   $rec['NOTES']=gr('notes');
-  //updating 'left' (varchar)
-   $rec['LEFT']=gr('left');
-  //updating 'top' (varchar)
-   $rec['TOP']=gr('top');
-  //updating 'zindex' (varchar)
-   $rec['ZINDEX']=gr('zindex');
-  //updating '<%LANG_UPDATED%>' (datetime)
-   global $updated_date;
-   global $updated_minutes;
-   global $updated_hours;
-   $rec['UPDATED']=toDBDate($updated_date)." $updated_hours:$updated_minutes:00";
+  //updating 'text' (varchar)
+   $rec['TEXT']=gr('text');
+  //updating 'name' (varchar)
+   $rec['NAME']=gr('name');
+  //updating 'color' (varchar)
+   $rec['COLOR']=gr('color');
+  //updating 'xyz' (varchar)
+   $rec['XYZ']=gr('xyz');
+  //updating 'dt' (varchar)
+   $rec['DT']=gr('dt');
   //UPDATING RECORD
    if ($ok) {
     if ($rec['ID']) {
@@ -39,31 +36,6 @@
     $out['OK']=1;
    } else {
     $out['ERR']=1;
-   }
-  }
-  if ($rec['UPDATED']!='') {
-   $tmp=explode(' ', $rec['UPDATED']);
-   $out['UPDATED_DATE']=fromDBDate($tmp[0]);
-   $tmp2=explode(':', $tmp[1]);
-   $updated_hours=$tmp2[0];
-   $updated_minutes=$tmp2[1];
-  }
-  for($i=0;$i<60;$i++) {
-   $title=$i;
-   if ($i<10) $title="0$i";
-   if ($title==$updated_minutes) {
-    $out['UPDATED_MINUTES'][]=array('TITLE'=>$title, 'SELECTED'=>1);
-   } else {
-    $out['UPDATED_MINUTES'][]=array('TITLE'=>$title);
-   }
-  }
-  for($i=0;$i<24;$i++) {
-   $title=$i;
-   if ($i<10) $title="0$i";
-   if ($title==$updated_hours) {
-    $out['UPDATED_HOURS'][]=array('TITLE'=>$title, 'SELECTED'=>1);
-   } else {
-    $out['UPDATED_HOURS'][]=array('TITLE'=>$title);
    }
   }
   if (is_array($rec)) {

@@ -1,16 +1,18 @@
-
  <!-- action usual -->
+ <!-- table app_stikers_data search -->
+ [#if VIEW_MODE="search_app_stikers_data" || VIEW_MODE=""#]
  
  <div>
- app_Stickers
+ app_stickers
 
 	<button class="btn btn-primary btn-sm float-right" data-toggle="modal" data-target="#about">About&nbsp;&nbsp;<span class="glyphicon glyphicon-info-sign icon-white"></span>
 	</button>
 </div>
  
+<!--# Окно about. Информация о приложении#-->
+   [#inc about.html#]
+[#endif#]
  
- <!-- table app_stikers_data search -->
- [#if VIEW_MODE="search_app_stikers_data" || VIEW_MODE=""#]
   [#inc app_stikers_data_search_admin.html#]
  [#endif VIEW_MODE#]
  <!-- / table app_stikers_data search -->

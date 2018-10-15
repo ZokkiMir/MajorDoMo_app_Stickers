@@ -1,10 +1,10 @@
 <?php
 /**
-* Stikeri 
+* stikers 
 * @package project
 * @author Wizard <sergejey@gmail.com>
 * @copyright http://majordomo.smartliving.ru/ (c)
-* @version 0.1 (wizard, 22:10:13 [Oct 15, 2018])
+* @version 0.1 (wizard, 23:10:53 [Oct 15, 2018])
 */
 //
 //
@@ -199,11 +199,11 @@ app_stikers_data -
   $data = <<<EOD
  app_stikers_data: ID int(10) unsigned NOT NULL auto_increment
  app_stikers_data: TITLE varchar(100) NOT NULL DEFAULT ''
- app_stikers_data: NOTES varchar(255) NOT NULL DEFAULT ''
- app_stikers_data: LEFT varchar(255) NOT NULL DEFAULT ''
- app_stikers_data: TOP varchar(255) NOT NULL DEFAULT ''
- app_stikers_data: ZINDEX varchar(255) NOT NULL DEFAULT ''
- app_stikers_data: UPDATED datetime
+ app_stikers_data: TEXT varchar(255) NOT NULL DEFAULT ''
+ app_stikers_data: NAME varchar(255) NOT NULL DEFAULT ''
+ app_stikers_data: COLOR varchar(255) NOT NULL DEFAULT ''
+ app_stikers_data: XYZ varchar(255) NOT NULL DEFAULT ''
+ app_stikers_data: DT varchar(255) NOT NULL DEFAULT ''
 EOD;
   parent::dbInstall($data);
  }
