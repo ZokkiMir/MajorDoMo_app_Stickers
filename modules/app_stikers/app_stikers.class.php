@@ -197,13 +197,23 @@ function usual(&$out) {
 app_stikers_data - 
 */
   $data = <<<EOD
- app_stikers_data: ID int(10) unsigned NOT NULL auto_increment
- app_stikers_data: TITLE varchar(100) NOT NULL DEFAULT ''
- app_stikers_data: NOTES varchar(255) NOT NULL DEFAULT ''
- app_stikers_data: LEFT varchar(255) NOT NULL DEFAULT ''
- app_stikers_data: TOP varchar(255) NOT NULL DEFAULT ''
- app_stikers_data: ZINDEX varchar(255) NOT NULL DEFAULT ''
- app_stikers_data: UPDATED datetime
+CREATE TABLE `app_stikers_data` (
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `text` varchar(128) collate utf8_unicode_ci NOT NULL default '',
+  `name` varchar(60) collate utf8_unicode_ci NOT NULL default '',
+  `color` enum('yellow','blue','green') collate utf8_unicode_ci NOT NULL default 'yellow',
+  `xyz` varchar(20) collate utf8_unicode_ci NOT NULL default '',
+  `dt` timestamp NOT NULL default CURRENT_TIMESTAMP,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=27 ;
+
+--
+-- Dumping data for table `app_stikers_data`
+--
+
+INSERT INTO `app_stikers_data` VALUES(1, 'This is the first note! Add yours from the button above..', 'Martin', 'yellow', '478x0x1', '2010-01-17 06:30:14');
+INSERT INTO `app_stikers_data` VALUES(2, 'The position of the app_stikers_data is saved with AJAX.', 'Martin', 'blue', '0x321x2', '2010-01-17 06:57:39');
+INSERT INTO `app_stikers_data` VALUES(3, 'The app_stikers_data are automatically deleted after an hour.', 'Martin', 'green', '311x41x3', '2010-01-17 06:57:39');
 EOD;
   parent::dbInstall($data);
  }
