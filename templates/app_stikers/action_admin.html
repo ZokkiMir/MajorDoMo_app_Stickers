@@ -1,0 +1,26 @@
+
+ <!-- action usual -->
+ 
+ <div>
+ app_Stickers
+
+	<button class="btn btn-primary btn-sm float-right" data-toggle="modal" data-target="#about">About&nbsp;&nbsp;<span class="glyphicon glyphicon-info-sign icon-white"></span>
+	</button>
+</div>
+ 
+ 
+ <!-- table app_stikers_data search -->
+ [#if VIEW_MODE="search_app_stikers_data" || VIEW_MODE=""#]
+  [#inc app_stikers_data_search_admin.html#]
+ [#endif VIEW_MODE#]
+ <!-- / table app_stikers_data search -->
+ <!-- table app_stikers_data edit -->
+ [#if VIEW_MODE="edit_app_stikers_data"#]
+   [#inc app_stikers_data_edit.html#]
+ [#endif VIEW_MODE#]
+ <!-- / table app_stikers_data edit -->
+ <!-- table app_stikers_data view --> 
+ [#if VIEW_MODE="view_app_stikers_data"#]
+   [#inc app_stikers_data_view.html#]
+ [#endif VIEW_MODE#]
+ <!-- / table app_stikers_data view -->
