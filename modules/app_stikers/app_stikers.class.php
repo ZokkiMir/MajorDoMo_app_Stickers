@@ -1,10 +1,10 @@
 <?php
 /**
-* Stikeri 
+* stikers 
 * @package project
 * @author Wizard <sergejey@gmail.com>
 * @copyright http://majordomo.smartliving.ru/ (c)
-* @version 0.1 (wizard, 22:10:13 [Oct 15, 2018])
+* @version 0.1 (wizard, 23:10:53 [Oct 15, 2018])
 */
 //
 //
@@ -18,7 +18,7 @@ class app_stikers extends module {
 */
 function __construct() {
   $this->name="app_stikers";
-  $this->title="Стикеры";
+  $this->title="stikers";
   $this->module_category="<#LANG_SECTION_APPLICATIONS#>";
   $this->checkInstalled();
 }
@@ -198,12 +198,12 @@ app_stikers_data -
 */
   $data = <<<EOD
  app_stikers_data: id int(10) unsigned NOT NULL auto_increment
- app_stikers_data: text varchar(128) collate utf8_unicode_ci NOT NULL default ''
- app_stikers_data: text varchar(128) collate utf8_unicode_ci NOT NULL default ''
- app_stikers_data: color enum('yellow','blue','green') collate utf8_unicode_ci NOT NULL default 'yellow'
- app_stikers_data: xyz varchar(20) collate utf8_unicode_ci NOT NULL default ''
- app_stikers_data: dt timestamp NOT NULL default CURRENT_TIMESTAMP
- app_stikers_data: UPDATED datetime
+ app_stikers_data: title varchar(100) NOT NULL DEFAULT ''
+ app_stikers_data: text varchar(255) NOT NULL DEFAULT ''
+ app_stikers_data: name varchar(255) NOT NULL DEFAULT ''
+ app_stikers_data: color varchar(255) NOT NULL DEFAULT ''
+ app_stikers_data: xyz varchar(255) NOT NULL DEFAULT ''
+ app_stikers_data: dt varchar(255) NOT NULL DEFAULT ''
 EOD;
   parent::dbInstall($data);
  }
