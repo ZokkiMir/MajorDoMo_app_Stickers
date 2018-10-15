@@ -160,9 +160,9 @@ function usual(&$out) {
 * @access public
 */
  function delete_app_stikers_data($id) {
-  $rec=SQLSelectOne("SELECT * FROM app_stikers_data WHERE ID='$id'");
+  $rec=SQLSelectOne("SELECT * FROM app_stikers_data WHERE id='$id'");
   // some action for related tables
-  SQLExec("DELETE FROM app_stikers_data WHERE ID='".$rec['ID']."'");
+  SQLExec("DELETE FROM app_stikers_data WHERE id='".$rec['id']."'");
  }
 /**
 * Install
