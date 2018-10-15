@@ -197,13 +197,13 @@ function usual(&$out) {
 app_stikers_data - 
 */
   $data = <<<EOD
- app_stikers_data: id int(10) unsigned NOT NULL auto_increment
- app_stikers_data: title varchar(100) NOT NULL DEFAULT ''
- app_stikers_data: text varchar(255) NOT NULL DEFAULT ''
- app_stikers_data: name varchar(255) NOT NULL DEFAULT ''
- app_stikers_data: color varchar(255) NOT NULL DEFAULT ''
- app_stikers_data: xyz varchar(255) NOT NULL DEFAULT ''
- app_stikers_data: dt varchar(255) NOT NULL DEFAULT ''
+ app_stikers_data: ID int(10) unsigned NOT NULL auto_increment
+ app_stikers_data: TITLE varchar(100) NOT NULL DEFAULT ''
+ app_stikers_data: REXT varchar(255) NOT NULL DEFAULT ''
+ app_stikers_data: NAME varchar(255) NOT NULL DEFAULT ''
+ app_stikers_data: COLOR varchar(255) NOT NULL DEFAULT ''
+ app_stikers_data: XYZ varchar(255) NOT NULL DEFAULT ''
+ app_stikers_data: DT varchar(255) NOT NULL DEFAULT ''
 EOD;
   parent::dbInstall($data);
  }
