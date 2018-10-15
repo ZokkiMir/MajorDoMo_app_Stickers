@@ -19,55 +19,40 @@
  </label>
  <div class="col-lg-9"><input id="title" name="title" value="[#TITLE#]" type="text" class="form-control"></div>
 </div>
-<!-- NOTES (varchar) -->
-<div class="form-group[#if ERR_NOTES#] has-error[#endif#]">
- <label for="notes" class="col-lg-3 control-label">
- notes:
+<!-- TEXT (varchar) -->
+<div class="form-group[#if ERR_TEXT#] has-error[#endif#]">
+ <label for="text" class="col-lg-3 control-label">
+ text:
  </label>
- <div class="col-lg-9"><input id="notes" name="notes" value="[#NOTES#]" type="text" class="form-control"></div>
+ <div class="col-lg-9"><input id="text" name="text" value="[#TEXT#]" type="text" class="form-control"></div>
 </div>
-<!-- LEFT (varchar) -->
-<div class="form-group[#if ERR_LEFT#] has-error[#endif#]">
- <label for="left" class="col-lg-3 control-label">
- left:
+<!-- NAME (varchar) -->
+<div class="form-group[#if ERR_NAME#] has-error[#endif#]">
+ <label for="name" class="col-lg-3 control-label">
+ name:
  </label>
- <div class="col-lg-9"><input id="left" name="left" value="[#LEFT#]" type="text" class="form-control"></div>
+ <div class="col-lg-9"><input id="name" name="name" value="[#NAME#]" type="text" class="form-control"></div>
 </div>
-<!-- TOP (varchar) -->
-<div class="form-group[#if ERR_TOP#] has-error[#endif#]">
- <label for="top" class="col-lg-3 control-label">
- top:
+<!-- COLOR (varchar) -->
+<div class="form-group[#if ERR_COLOR#] has-error[#endif#]">
+ <label for="color" class="col-lg-3 control-label">
+ color:
  </label>
- <div class="col-lg-9"><input id="top" name="top" value="[#TOP#]" type="text" class="form-control"></div>
+ <div class="col-lg-9"><input id="color" name="color" value="[#COLOR#]" type="text" class="form-control"></div>
 </div>
-<!-- ZINDEX (varchar) -->
-<div class="form-group[#if ERR_ZINDEX#] has-error[#endif#]">
- <label for="zindex" class="col-lg-3 control-label">
- zindex:
+<!-- XYZ (varchar) -->
+<div class="form-group[#if ERR_XYZ#] has-error[#endif#]">
+ <label for="xyz" class="col-lg-3 control-label">
+ xyz:
  </label>
- <div class="col-lg-9"><input id="zindex" name="zindex" value="[#ZINDEX#]" type="text" class="form-control"></div>
+ <div class="col-lg-9"><input id="xyz" name="xyz" value="[#XYZ#]" type="text" class="form-control"></div>
 </div>
-<!-- UPDATED (datetime) -->
-<div class="form-group[#if ERR_UPDATED#] has-error[#endif#]">
- <label class="col-lg-3 control-label"[#if ERR_UPDATED#] style="color:red;font-weight:bold"[#endif#]>
- <#LANG_UPDATED#>:
+<!-- DT (varchar) -->
+<div class="form-group[#if ERR_DT#] has-error[#endif#]">
+ <label for="dt" class="col-lg-3 control-label">
+ dt:
  </label>
- <div class="col-lg-4">
- <input type="text" name="updated_date" value="[#UPDATED_DATE#]" maxlength=10 size=12 class="form-control">
- [#module name="dateselect" field="updated_date" form="frmEdit"#]
- &nbsp;&nbsp;&nbsp;
- <select name="updated_hours" class="form-control">
- [#begin UPDATED_HOURS#]
- <option[#if SELECTED#] selected[#endif SELECTED#]>[#TITLE#]
- [#end UPDATED_HOURS#]
- </select>
- :
- <select name="updated_minutes" class="form-control">
- [#begin UPDATED_MINUTES#]
- <option[#if SELECTED#] selected[#endif SELECTED#]>[#TITLE#]
- [#end UPDATED_MINUTES#]
- </select>
- </div>
+ <div class="col-lg-9"><input id="dt" name="dt" value="[#DT#]" type="text" class="form-control"></div>
 </div>
 <div class="form-group">
         <div class="col-lg-offset-3 col-lg-4">
