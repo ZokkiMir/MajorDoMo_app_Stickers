@@ -204,6 +204,10 @@ app_stikers_data -
  app_stikers_data: COLOR varchar(255) NOT NULL DEFAULT ''
  app_stikers_data: XYZ varchar(255) NOT NULL DEFAULT ''
  app_stikers_data: DT varchar(255) NOT NULL DEFAULT ''
+ 
+ INSERT INTO `app_stikers_data` VALUES(1, '', 'This is the first note! Add yours from the button above..', 'Martin', 'yellow', '478x0x1', '2010-01-17 06:30:14');
+INSERT INTO `app_stikers_data` VALUES(3, '', 'The notes are automatically deleted after an hour.', 'Martin', 'green', '311x41x3', '2010-01-17 06:57:39');
+INSERT INTO `app_stikers_data` VALUES(2, '', 'The position of the notes is saved with AJAX.', 'Martin', 'blue', '0x321x2', '2010-01-17 06:57:39');
 EOD;
   parent::dbInstall($data);
  }
